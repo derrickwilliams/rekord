@@ -1,0 +1,17 @@
+<ion-view view-title="Results">
+  <ion-content>
+    <div class="card" ng-if="!vm.hasDailies">
+      <div class="item item-text-wrap">
+        You're not tracking anything yet. <a ui-sref="tab.settings">Get started</a>!
+      </div>
+    </div>
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right" type="item-text-wrap"
+                ng-repeat="daily in vm.dailies"
+                ui-sref="tab.results-details({ itemId: 'blah' })">
+
+        <h2>{{daily.name}}</h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

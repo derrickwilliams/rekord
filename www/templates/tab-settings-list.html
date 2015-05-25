@@ -1,0 +1,15 @@
+<ion-view view-title="Dailys List">
+  <ion-nav-buttons side="secondary">
+    <button class="button button-clear icon ion-ios-plus-empty" ng-click="vm.showNewDailyModal()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="daily in vm.dailies">
+        {{daily.name}}
+        <span class="item-note">
+          {{daily.unit}}
+        </span>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,18 @@
+<ion-view view-title="Today">
+  <ion-content>
+    <div class="card" ng-if="!vm.hasDailies">
+      <div class="item item-text-wrap">
+        You're not tracking anything yet. <a ui-sref="tab.settings">Get started</a>!
+      </div>
+    </div>
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right" type="item-text-wrap"
+        ng-repeat="daily in vm.dailies"
+        on-hold="vm.loadCountModal(daily)">
+
+        <h2>{{daily.name}}</h2>
+        <span class="badge badge-stable">{{daily.count}}</span>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,74 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+
+    <div class="row">
+      <div class="col">
+        <div class="list card">
+          <div class="item item-divider">Today</div>
+          <div class="item item-body">
+            <div>
+              {{ vm.today | date : 'MMM d, y' }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="list card">
+          <div class="item item-divider"># Tracking</div>
+          <div class="item item-body">
+            <div>
+              {{ vm.countOfItemsTracked }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col">
+        <div class="list card">
+          <div class="item item-divider">DB Info</div>
+          <div class="item item-body">
+            <div>
+              {{ vm.dbInfo }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col">
+        <div class="list card">
+          <div class="item item-divider">DB Info</div>
+          <div class="item item-body">
+            <div>
+              {{ vm.configData }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--<div class="list">-->
+
+      <!--<label class="item item-input item-select">-->
+        <!--<div class="input-label">-->
+          <!--Lightsaber-->
+        <!--</div>-->
+        <!--<select>-->
+          <!--<option>Blue</option>-->
+          <!--<option selected>Green</option>-->
+          <!--<option>Red</option>-->
+        <!--</select>-->
+      <!--</label>-->
+
+    <!--</div>-->
+
+  </ion-content>
+</ion-view>
